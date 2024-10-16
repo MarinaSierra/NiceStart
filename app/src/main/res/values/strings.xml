@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">NiceStart</string>
+    <string name="name">Name</string>
+    <string name="go">GO!</string>
+    <string name="cancel">CANCEL</string>
+    <string name="password">Password</string>
+    <string name="register">Register</string>
+    <string name="Register">REGISTER</string>
+    <string name="logo">logo</string>
+    <string name="login">LOGIN</string>
+    <string name="sign_up">SIGN UP</string>
+    <string name="passwd">Password</string>
+</resources>
