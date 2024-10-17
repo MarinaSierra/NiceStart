@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/gradient"
-    tools:context=".MainActivity">
+    tools:context=".Login">
 
 
     <ImageView
@@ -66,33 +66,28 @@
 
     <Button
         android:id="@+id/button1"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:backgroundTint="@color/fucsia_700"
-        android:text="@string/sign_up"
-        android:textColor="@color/white"
-        app:cornerRadius="0dp"
-        app:layout_constraintBottom_toBottomOf="@id/button2"
-        app:layout_constraintEnd_toEndOf="@id/lineV2"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@id/lineV1"
-        app:layout_constraintTop_toBottomOf="@id/password"
-        app:layout_constraintVertical_bias="0.224" />
-
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:backgroundTint="#FFFFFF"
-        android:text="@string/sign_up"
-        android:textColor="#000000"
-        app:cornerRadius="0dp"
+        style="@style/buttonflat"
+        android:layout_marginBottom="196dp"
+        android:text="@string/log"
         app:layout_constraintBottom_toBottomOf="@id/main"
         app:layout_constraintEnd_toEndOf="@id/lineV2"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@id/lineV1"
-        app:layout_constraintTop_toTopOf="@id/button1"
-        app:layout_constraintVertical_bias="0.224" />
+        app:layout_constraintTop_toBottomOf="@id/password"
+        app:layout_constraintVertical_bias="0.272" />
+
+    <Button
+        android:id="@+id/button2"
+        style="@style/buttonOutline"
+        android:onClick="openSignUp"
+        android:text="@string/sign_up"
+        app:layout_constraintBottom_toBottomOf="@id/main"
+        app:layout_constraintEnd_toEndOf="@id/lineV2"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@id/lineV1"
+        app:layout_constraintTop_toBottomOf="@id/button1"
+        app:layout_constraintVertical_bias="0.047"
+        app:strokeColor="@color/white" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/lineV1"

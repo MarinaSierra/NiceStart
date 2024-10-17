@@ -10,4 +10,10 @@
     <string name="login">LOGIN</string>
     <string name="sign_up">SIGN UP</string>
     <string name="passwd">Password</string>
+    <string name="log">LOGIN</string>
+    <string name="confirmar">Confirmar</string>
+    <string name="email">Email</string>
+    <string name="cancels">CANCEL</string>
+    <string name="confirm">CONFIRM</string>
+    <string name="confirm_password">Confirm password</string>
 </resources>
