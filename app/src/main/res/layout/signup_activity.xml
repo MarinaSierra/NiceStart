@@ -6,15 +6,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/gradient"
-    tools:context=".Login">
+    tools:context=".SignUp">
 
 
     <ImageView
-        android:id="@+id/girl"
+        android:id="@+id/boy"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scaleType="fitStart"
-        android:src="@drawable/girl"
+        android:src="@drawable/hipman"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -33,7 +33,7 @@
         android:id="@+id/username"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="10dp"
         app:layout_constraintEnd_toEndOf="@id/lineV2"
         app:layout_constraintStart_toStartOf="@id/lineV1"
         app:layout_constraintTop_toBottomOf="@id/logo">
@@ -41,7 +41,7 @@
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/name"
+            android:hint="@string/name"
             android:background="@color/white"
             android:alpha="0.6"/>
     </com.google.android.material.textfield.TextInputLayout>
@@ -50,7 +50,7 @@
         android:id="@+id/password"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="10dp"
         app:layout_constraintEnd_toEndOf="@id/lineV2"
         app:layout_constraintStart_toStartOf="@id/lineV1"
         app:layout_constraintTop_toBottomOf="@id/username">
@@ -58,7 +58,42 @@
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/passwd"
+            android:hint="@string/passwd"
+            android:background="@color/white"
+            android:alpha="0.6"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/confpasswd"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="@id/lineV2"
+        app:layout_constraintStart_toStartOf="@id/lineV1"
+        app:layout_constraintTop_toBottomOf="@id/password">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/confirm_password"
+            android:background="@color/white"
+            android:alpha="0.6"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/email"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        app:layout_constraintEnd_toEndOf="@id/lineV2"
+        app:layout_constraintStart_toStartOf="@id/lineV1"
+        app:layout_constraintTop_toBottomOf="@id/confpasswd">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/email"
             android:background="@color/white"
             android:alpha="0.6"/>
     </com.google.android.material.textfield.TextInputLayout>
@@ -66,27 +101,28 @@
 
     <Button
         android:id="@+id/button1"
-        style="@style/buttonflat"
-        android:layout_marginBottom="196dp"
-        android:text="@string/log"
-        app:layout_constraintBottom_toBottomOf="@id/main"
+        android:text="@string/confirm"
+        android:onClick="openMain"
+        app:layout_constraintBottom_toBottomOf="@id/button2"
         app:layout_constraintEnd_toEndOf="@id/lineV2"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@id/lineV1"
-        app:layout_constraintTop_toBottomOf="@id/password"
-        app:layout_constraintVertical_bias="0.272" />
+        app:layout_constraintTop_toBottomOf="@id/email"
+        app:layout_constraintVertical_bias="0.224"
+        style="@style/buttonflat" />
 
     <Button
         android:id="@+id/button2"
         style="@style/buttonOutline"
-        android:onClick="openSignUp"
-        android:text="@string/sign_up"
+        android:text="@string/cancels"
+        android:layout_marginTop="10dp"
+        android:onClick="openLogin"
         app:layout_constraintBottom_toBottomOf="@id/main"
         app:layout_constraintEnd_toEndOf="@id/lineV2"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@id/lineV1"
-        app:layout_constraintTop_toBottomOf="@id/button1"
-        app:layout_constraintVertical_bias="0.047"
+        app:layout_constraintTop_toTopOf="@id/button1"
+        app:layout_constraintVertical_bias="0.224"
         app:strokeColor="@color/white" />
 
     <androidx.constraintlayout.widget.Guideline
@@ -94,14 +130,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.25" />
+        app:layout_constraintGuide_percent="0.20" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/lineV2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.75" />
+        app:layout_constraintGuide_percent="0.80" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/lineH1"

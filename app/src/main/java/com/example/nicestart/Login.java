@@ -15,7 +15,7 @@ public class Login extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.login_activity);
 
 
 
@@ -27,7 +27,12 @@ public class Login extends AppCompatActivity {
     }
 
     public void openSignUp(View view) {
-        Intent intent = new Intent(Login.this, SignUp.class);
-        startActivity(intent);
+        Intent intent1 = new Intent(Login.this, SignUp.class);
+        startActivity(intent1);
+    }
+
+    public void openMain(View view) {
+        Intent intent2 = new Intent(Login.this, Main.class);
+        startActivity(intent2);
     }
 }

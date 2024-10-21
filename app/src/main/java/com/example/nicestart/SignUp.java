@@ -16,7 +16,7 @@ public class SignUp extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_sign_up);
+        setContentView(R.layout.signup_activity);
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
@@ -25,7 +25,12 @@ public class SignUp extends AppCompatActivity {
     }
 
     public void openLogin(View view) {
-        Intent intent = new Intent(SignUp.this, Login.class);
-        startActivity(intent);
+        Intent intent1 = new Intent(SignUp.this, Login.class);
+        startActivity(intent1);
+    }
+
+    public void openMain(View view) {
+        Intent intent2 = new Intent(SignUp.this, Main.class);
+        startActivity(intent2);
     }
 }
