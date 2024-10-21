@@ -24,12 +24,14 @@
         android:id="@+id/logo"
         android:layout_width="110dp"
         android:layout_height="110dp"
+        android:layout_marginTop="20dp"
         android:src="@drawable/ic_action_name"
-        app:layout_constraintEnd_toEndOf="@id/lineV2"
-        app:layout_constraintTop_toTopOf="@id/main"
-        app:layout_constraintStart_toStartOf="@id/lineV1"
-        app:layout_constraintBottom_toBottomOf="@id/lineH2"
-        android:layout_marginTop="20dp"/>
+        app:layout_constraintBottom_toBottomOf="@id/main"
+        app:layout_constraintEnd_toEndOf="@id/main"
+        app:layout_constraintHorizontal_bias="0.484"
+        app:layout_constraintStart_toStartOf="@id/lineV2"
+        app:layout_constraintTop_toTopOf="@id/lineH1"
+        app:layout_constraintVertical_bias="0.091" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/username"
@@ -38,11 +40,11 @@
         android:layout_marginTop="5dp"
         app:layout_constraintEnd_toEndOf="@id/lineV2"
         app:layout_constraintStart_toStartOf="@id/lineV1"
-        app:layout_constraintTop_toBottomOf="@id/logo">
+        app:layout_constraintTop_toBottomOf="@id/lineH2">
 
         <EditText
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="45dp"
             android:alpha="0.6"
             android:background="@color/white"
             android:hint="@string/name" />
@@ -59,10 +61,10 @@
 
         <EditText
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="@string/passwd"
+            android:layout_height="45dp"
+            android:alpha="0.6"
             android:background="@color/white"
-            android:alpha="0.6"/>
+            android:hint="@string/passwd" />
     </com.google.android.material.textfield.TextInputLayout>
 
 
@@ -97,14 +99,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.30" />
+        app:layout_constraintGuide_percent="0.28" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/lineV2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.70" />
+        app:layout_constraintGuide_percent="0.72" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/lineH1"
