@@ -16,4 +16,5 @@
     <string name="cancels">CANCEL</string>
     <string name="confirm">CONFIRM</string>
     <string name="confirm_password">Confirm password</string>
+    <string name="lg">LOGIN</string>
 </resources>
