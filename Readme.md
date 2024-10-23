@@ -1,6 +1,6 @@
 # PROYECTO DE COMIENZO: NICESTART
 
-Hasta ahora tenemos tres actividades: **LOGIN** y **SIGN UP**. 
+Hasta ahora tenemos dos actividades: **LOGIN** y **SIGN UP**. 
 
 ## LOGIN: 
 ![login activity](img/login.png)
