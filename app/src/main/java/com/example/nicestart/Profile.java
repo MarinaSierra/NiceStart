@@ -16,7 +16,7 @@ import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions;
 public class Profile extends AppCompatActivity {
     TextView texto;
-    //Button edit;
+    ImageView edit;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,14 +36,15 @@ public class Profile extends AppCompatActivity {
         String nombre = intent.getStringExtra("Nombre");
         texto.setText(nombre);
 
-        /*edit=findViewById(R.id.editar);
+        edit=findViewById(R.id.editar);
 
         edit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                
+                Intent int2 = new Intent(Profile.this, editProfile.class);
+                startActivity(int2);
             }
-        });*/
+        });
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);

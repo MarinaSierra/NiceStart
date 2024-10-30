@@ -18,4 +18,5 @@
     <string name="confirm_password">Confirm password</string>
     <string name="lg">LOGIN</string>
     <string name="nicestart">NiceStart</string>
+    <string name="profile">Profile</string>
 </resources>
