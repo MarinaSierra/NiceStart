@@ -23,7 +23,7 @@ public class Splash extends AppCompatActivity {
         openApp();
 
         ImageView imagen = findViewById(R.id.img);
-        Animation myanim = AnimationUtils.loadAnimation(this, R.anim.blink);
+        Animation myanim = AnimationUtils.loadAnimation(this, R.anim.rotate);
         imagen.startAnimation(myanim);
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
