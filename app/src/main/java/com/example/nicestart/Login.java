@@ -6,6 +6,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -19,6 +20,7 @@ import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions;
 public class Login extends AppCompatActivity {
     EditText txt1, txt2;
     Button bot1;
+    TextView texto;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,6 +31,8 @@ public class Login extends AppCompatActivity {
 
         bot1=findViewById(R.id.button1);
 
+        texto=findViewById(R.id.txt);
+
         bot1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -36,6 +40,14 @@ public class Login extends AppCompatActivity {
                 String value = txt1.getText().toString();
                 intent2.putExtra("Nombre", value);
                 startActivity(intent2);
+            }
+        });
+
+        texto.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Login.this, Main.class);
+                startActivity(intent);
             }
         });
         ImageView mGirl=findViewById(R.id.girl);

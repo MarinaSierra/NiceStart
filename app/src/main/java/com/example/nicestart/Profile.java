@@ -1,6 +1,7 @@
 package com.example.nicestart;
 
 import android.content.Intent;
+import android.media.Image;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -22,6 +23,15 @@ public class Profile extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.profile_activity);
+
+        ImageView ban = findViewById(R.id.profileBanner);
+        Glide.with(this)
+                .load("https://static.vecteezy.com/system/resources/previews/000/701/690/non_2x/abstract-polygonal-banner-background-vector.jpg")
+                .transition(DrawableTransitionOptions.withCrossFade(1000))
+                //.centerCrop()
+                //.circleCrop() //CIRCULO
+                //.placeholder(new ColorDrawable(this.getResources().getColor(R.color.CornflowerBlue)))
+                .into(ban);
 
         ImageView prof = findViewById(R.id.profileImg);
         Glide.with(this)

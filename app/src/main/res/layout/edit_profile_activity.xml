@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/gradient"
+    android:background="@color/white"
     tools:context=".editProfile">
 
     <ImageView
@@ -112,25 +112,6 @@
     </com.google.android.material.textfield.TextInputLayout>
 
 
-    <!--<com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/decsUSER"
-        android:layout_width="289dp"
-        android:layout_height="222dp"
-        android:layout_marginTop="16dp"
-        app:layout_constraintEnd_toEndOf="@id/guideline3"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@id/main"
-        app:layout_constraintTop_toBottomOf="@id/email">
-
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="222dp"
-            android:alpha="0.6"
-            android:background="@color/white"
-            android:hint="About me: "
-            android:textSize="14sp" />
-    </com.google.android.material.textfield.TextInputLayout>-->
-
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/confpasswd"
         android:layout_width="0dp"
@@ -153,12 +134,15 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
+        android:id="@+id/confirmar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:fontFamily="@font/abril_fatface"
         android:text="Confirm"
         style="@style/landButton1"
+        android:backgroundTint="@color/LightSteelBlue"
+        android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="@id/main"
         app:layout_constraintHorizontal_bias="0.727"
         app:layout_constraintStart_toStartOf="@id/guideline2"

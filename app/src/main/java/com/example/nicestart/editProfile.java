@@ -1,6 +1,8 @@
 package com.example.nicestart;
 
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 
 import androidx.activity.EdgeToEdge;
@@ -13,7 +15,7 @@ import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions;
 
 public class editProfile extends AppCompatActivity {
-
+    //Button comfirm;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,6 +40,15 @@ public class editProfile extends AppCompatActivity {
                 //.circleCrop() //CIRCULO
                 //.placeholder(new ColorDrawable(this.getResources().getColor(R.color.CornflowerBlue)))
                 .into(userBanner);
+
+        //comfirm=findViewById(R.id.confirmar);
+
+        /*comfirm.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });*/
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());

@@ -15,11 +15,16 @@
         android:theme="@style/Theme.NiceStart"
         tools:targetApi="31">
         <activity
+            android:name=".Main"
+            android:exported="true"
+            android:allowTaskReparenting="true"
+            android:theme="@style/Theme.Nicestart.ActionBar.Transparent" />
+        <activity
             android:name=".editProfile"
             android:exported="true"
             android:label="Edit your profile"
             android:parentActivityName=".Profile"
-            android:theme="@style/Theme.Nicestart.ActionBar.Transparent"/>
+            android:theme="@style/Theme.Nicestart.ActionBar.Transparent" />
         <activity
             android:name=".Splash"
             android:exported="true">
