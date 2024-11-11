@@ -5,18 +5,8 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/gradient"
+    android:background="@color/white"
     tools:context=".SignUp">
-
-
-    <ImageView
-        android:id="@+id/boy"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:scaleType="fitStart"
-        android:alpha="0.7"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/logo"
@@ -117,16 +107,16 @@
     <Button
         android:id="@+id/button2"
         style="@style/buttonOutline"
-        android:text="@string/cancels"
         android:layout_marginTop="10dp"
         android:onClick="openLogin"
+        android:text="@string/cancels"
         app:layout_constraintBottom_toBottomOf="@id/main"
         app:layout_constraintEnd_toEndOf="@id/lineV2"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@id/lineV1"
         app:layout_constraintTop_toTopOf="@id/button1"
         app:layout_constraintVertical_bias="0.224"
-        app:strokeColor="@color/white" />
+        app:strokeColor="@color/black" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/lineV1"

@@ -25,13 +25,6 @@ public class SignUp extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.signup_activity);
 
-        ImageView mBoy = findViewById(R.id.boy);
-        Glide.with(this)
-                        .load("https://f.fcdn.app/imgs/3832f5/www.celiafirpo.com.uy/fliluy/2b9d/original/catalogo/FRN012_FRN012_1/1920-1200/ramo-de-flores-naturales-gallerie-ramo-de-flores-naturales-gallerie.jpg")
-                .transition(DrawableTransitionOptions.withCrossFade(2000))
-                .centerCrop()
-                .placeholder(new ColorDrawable(this.getResources().getColor(R.color.CornflowerBlue)))
-                .into(mBoy);
 
         b=findViewById(R.id.button1);
         txt=findViewById(R.id.name);
@@ -39,9 +32,7 @@ public class SignUp extends AppCompatActivity {
         b.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String value = txt.getText().toString();
-                Intent intent2 = new Intent(SignUp.this, Profile.class);
-                intent2.putExtra("Nombre", value);
+                Intent intent2 = new Intent(SignUp.this, Main.class);
                 startActivity(intent2);
             }
         });

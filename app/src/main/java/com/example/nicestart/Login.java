@@ -20,7 +20,6 @@ import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions;
 public class Login extends AppCompatActivity {
     EditText txt1, txt2;
     Button bot1;
-    TextView texto;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,33 +30,14 @@ public class Login extends AppCompatActivity {
 
         bot1=findViewById(R.id.button1);
 
-        texto=findViewById(R.id.txt);
-
         bot1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent2 = new Intent(Login.this, Profile.class);
-                String value = txt1.getText().toString();
-                intent2.putExtra("Nombre", value);
+                Intent intent2 = new Intent(Login.this, Main.class);
                 startActivity(intent2);
             }
         });
 
-        texto.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(Login.this, Main.class);
-                startActivity(intent);
-            }
-        });
-        ImageView mGirl=findViewById(R.id.girl);
-        Glide.with(this)
-                        .load("https://media.revistaad.es/photos/61e6fa8210427c62e91838e8/1:1/w_3839,h_3839,c_limit/taisiia-stupak-SFYL9rFcLy0-unsplash.jpg")
-                            .transition(DrawableTransitionOptions.withCrossFade(1000))
-                                .centerCrop()
-                //.circleCrop() CIRCULO
-                                        //.placeholder(new ColorDrawable(this.getResources().getColor(R.color.CornflowerBlue)))
-                                                .into(mGirl);
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
