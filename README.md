@@ -1,6 +1,6 @@
 # PROYECTO DE COMIENZO: NICESTART
 
-We have five activities/interactions until now: **SPLASH**, **LOGIN**,  **SIGN UP**, **PROFILE** and **EDIT PROFILE**. 
+We have six activities/interactions until now: **SPLASH**, **LOGIN**,  **SIGN UP**, **MAIN**, **PROFILE** and **EDIT PROFILE**. 
 
 ## SPLASH: 
 Firstly, when opening the app, it shows the splash activity, 
@@ -23,6 +23,20 @@ Both activities are **related**:
         Intent intent1 = new Intent(Login.this, SignUp.class);
         startActivity(intent1);
     }
+
+## Main: 
+In this activity, I am testing some functions as the SnackBar:
+    `Snackbar snackbar1 = Snackbar.make(mLayout, "Action is done", Snackbar.LENGTH_SHORT);
+    snackbar1.show();`
+Toast function, which pops up with some information:
+    `Toast.makeText(this, "Item copied", Toast.LENGTH_SHORT).show();`
+
+You can go to your profile by clicking the person icon: 
+![profile_icon](drawable/profile_icon)
+
+It looks like this: 
+
+![main_activity](img/main.png){:height="560px" width="360px"}
 
 ## Profile: 
 ![profile_activity](img/profile.png)
