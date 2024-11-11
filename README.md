@@ -34,7 +34,7 @@ Toast function, which pops up with some information:
     `Toast.makeText(this, "Item copied", Toast.LENGTH_SHORT).show();`
 
 You can go to your profile by clicking the person icon: 
-![profile_icon](drawable/profile_icon)
+![profile_icon](img/person_icon.png)
 
 It looks like this: 
 
