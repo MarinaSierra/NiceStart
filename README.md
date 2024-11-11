@@ -26,9 +26,11 @@ Both activities are **related**:
 
 ## Main: 
 In this activity, I am testing some functions as the SnackBar:
+
     `Snackbar snackbar1 = Snackbar.make(mLayout, "Action is done", Snackbar.LENGTH_SHORT);
     snackbar1.show();`
 Toast function, which pops up with some information:
+
     `Toast.makeText(this, "Item copied", Toast.LENGTH_SHORT).show();`
 
 You can go to your profile by clicking the person icon: 
