@@ -6,7 +6,7 @@ We have six activities/interactions until now: **SPLASH**, **LOGIN**,  **SIGN UP
 Firstly, when opening the app, it shows the splash activity, 
 which then will be automatically redirect to Login.
 
-![splash_activity](videos/splash.webm)
+[![splash_activity](videos/splash.mp4)]
 
 ## LOGIN: 
 ![login activity](img/login.png)
