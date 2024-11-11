@@ -6,7 +6,7 @@ We have six activities/interactions until now: **SPLASH**, **LOGIN**,  **SIGN UP
 Firstly, when opening the app, it shows the splash activity, 
 which then will be automatically redirect to Login.
 
-![splash_activity](img/splash.png)
+![splash_activity](videos/splash.webm)
 
 ## LOGIN: 
 ![login activity](img/login.png)
@@ -36,8 +36,7 @@ You can go to your profile by clicking the person icon:
 
 It looks like this: 
 
-![main_activity](img/main.png){:height="560px" width="360px"}
-
+![main_activity](img/main.png)
 ## Profile: 
 ![profile_activity](img/profile.png)
 
