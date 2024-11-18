@@ -33,16 +33,34 @@ Toast function, which pops up with some information:
 
     `Toast.makeText(this, "Item copied", Toast.LENGTH_SHORT).show();`
 
+It now has a WebView which refresh an image of a web: 
+    `miVisorWeb = (WebView) findViewById(R.id.vistaweb);
+    WebSettings webSettings = miVisorWeb.getSettings();
+    webSettings.setLoadWithOverviewMode(true);
+    webSettings.setUseWideViewPort(true);
+    miVisorWeb.loadUrl("https://thispersondoesnotexist.com");`
+
+Another new function, is the Swipe Refresh Layout: 
+    `protected SwipeRefreshLayout.OnRefreshListener
+        mOnRefreshListener = new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+                miVisorWeb.reload();
+                swipeLayout.setRefreshing(false);
+        }
+    };`
+
+It looks like this:
+
+![main_activity](img/main.png)
+
 You can go to your profile by clicking the person icon: 
 ![profile_icon](img/person_icon.png)
 
-It looks like this: 
-
-![main_activity](img/main.png)
 ## Profile: 
 ![profile_activity](img/profile.png)
 
-This activity adds the name you've introduced in the login activity. 
+This activity adds the name you've introduced by editing the profile. 
 It includes an edit button which sends you to this: 
 
 ## Edit profile: 
