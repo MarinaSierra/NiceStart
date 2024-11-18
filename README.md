@@ -33,14 +33,18 @@ Toast function, which pops up with some information:
 
     `Toast.makeText(this, "Item copied", Toast.LENGTH_SHORT).show();`
 
+
 It now has a WebView which refresh an image of a web: 
+
     `miVisorWeb = (WebView) findViewById(R.id.vistaweb);
     WebSettings webSettings = miVisorWeb.getSettings();
     webSettings.setLoadWithOverviewMode(true);
     webSettings.setUseWideViewPort(true);
     miVisorWeb.loadUrl("https://thispersondoesnotexist.com");`
 
+
 Another new function, is the Swipe Refresh Layout: 
+
     `protected SwipeRefreshLayout.OnRefreshListener
         mOnRefreshListener = new SwipeRefreshLayout.OnRefreshListener() {
             @Override
@@ -49,6 +53,7 @@ Another new function, is the Swipe Refresh Layout:
                 swipeLayout.setRefreshing(false);
         }
     };`
+
 
 It looks like this:
 
