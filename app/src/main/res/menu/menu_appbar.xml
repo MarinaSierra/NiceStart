@@ -11,4 +11,9 @@
         android:title="Download"
         android:icon="@drawable/profile_icon"
         app:showAsAction="ifRoom"/>
+    <item
+        android:id="@+id/item5"
+        android:title="map"
+        android:icon="@drawable/map_icon"
+        app:showAsAction="ifRoom"/>
 </menu>

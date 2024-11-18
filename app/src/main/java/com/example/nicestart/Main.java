@@ -11,6 +11,7 @@ import android.webkit.WebSettings;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.core.graphics.Insets;
@@ -18,6 +19,7 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
+import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 import com.google.android.material.snackbar.Snackbar;
 
 public class Main extends AppCompatActivity {
@@ -98,9 +100,20 @@ public class Main extends AppCompatActivity {
         } else if (id==R.id.item4) {
             Intent intent=new Intent(this, Profile.class);
             startActivity(intent);
+        } else if (id==R.id.item5) {
+            showAlertDialogButtonClicked(Main.this);
         }
         return super.onOptionsItemSelected(item);
     }
 
+    public void showAlertDialogButtonClicked(Main main){
+        MaterialAlertDialogBuilder builder = new MaterialAlertDialogBuilder(this);
+        builder.setTitle("Achtung!");
+        builder.setMessage("Where do you go?");
+        builder.setIcon(R.drawable.map_icon);
+        builder.setCancelable(false);
 
+        AlertDialog dialog = builder.create();
+        dialog.show();
+    }
 }
