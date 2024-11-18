@@ -42,10 +42,7 @@ public class Profile extends AppCompatActivity {
                 .circleCrop() //CIRCULO
                 //.placeholder(new ColorDrawable(this.getResources().getColor(R.color.CornflowerBlue)))
                 .into(prof);
-        texto=findViewById(R.id.name);
-        Intent intent = getIntent();
-        String nombre = intent.getStringExtra("Nombre");
-        texto.setText(nombre);
+
 
         edit=findViewById(R.id.editar);
 
@@ -56,6 +53,10 @@ public class Profile extends AppCompatActivity {
                 startActivity(int2);
             }
         });
+        texto=findViewById(R.id.name);
+        Intent in = getIntent();
+        String nombre = in.getStringExtra("n");
+        texto.setText(nombre);
 
         b=findViewById(R.id.continuar);
         b.setOnClickListener(new View.OnClickListener() {

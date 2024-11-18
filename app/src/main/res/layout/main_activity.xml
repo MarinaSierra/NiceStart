@@ -8,14 +8,27 @@
     tools:context=".Main"
     android:background="@color/white">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/hola"
-        android:textSize="40sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+
+    <!--
+    EN BUILD.GRADLE:
+    implementation 'androidx.swiprefreshlayout:swiprefreshlayout:1.1.0'-->
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/myswipe"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        >
+
+        <WebView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/vistaweb"
+            >
+        </WebView>
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

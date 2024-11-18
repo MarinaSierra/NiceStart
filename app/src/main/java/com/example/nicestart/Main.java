@@ -6,7 +6,8 @@ import android.view.ContextMenu;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.TextView;
+import android.webkit.WebView;
+import android.webkit.WebSettings;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
@@ -15,20 +16,30 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import com.google.android.material.snackbar.Snackbar;
 
 public class Main extends AppCompatActivity {
-    TextView texto;
+    private SwipeRefreshLayout swipeLayout;
+    private WebView miVisorWeb;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.main_activity);
 
-        texto=findViewById(R.id.textView);
+        WebView mycontext = findViewById(R.id.vistaweb);
+        registerForContextMenu(mycontext);
 
-        registerForContextMenu(texto);
+        swipeLayout = (SwipeRefreshLayout) findViewById(R.id.myswipe);
+        swipeLayout.setOnRefreshListener(mOnRefreshListener);
+
+        miVisorWeb = (WebView) findViewById(R.id.vistaweb);
+        WebSettings webSettings = miVisorWeb.getSettings();
+        webSettings.setLoadWithOverviewMode(true);
+        webSettings.setUseWideViewPort(true);
+        miVisorWeb.loadUrl("https://thispersondoesnotexist.com");
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
@@ -37,22 +48,32 @@ public class Main extends AppCompatActivity {
         });
     }
 
+    protected SwipeRefreshLayout.OnRefreshListener
+            mOnRefreshListener = new SwipeRefreshLayout.OnRefreshListener() {
+        @Override
+        public void onRefresh() {
+            /*final ConstraintLayout mLayout=findViewById(R.id.main);
+            Snackbar snackbar = Snackbar
+                    .make(mLayout, "Que miedo!", Snackbar.LENGTH_SHORT);
+            snackbar.show();*/
+            miVisorWeb.reload();
+            swipeLayout.setRefreshing(false);
+        }
+    };
+
     public void onCreateContextMenu(ContextMenu menu, View v, ContextMenu.ContextMenuInfo menuInfo){
         getMenuInflater().inflate(R.menu.menu_context, menu);
     }
 
     public boolean onContextItemSelected(MenuItem item){
         int id=item.getItemId();
-        boolean op = false;
         if (id == R.id.item1) {
             Toast.makeText(this, "Item copied", Toast.LENGTH_SHORT).show();
-            op=true;
         } else if (id == R.id.item2) {
             Toast.makeText(this, "Downloading item...", Toast.LENGTH_SHORT).show();
-            op=true;
         }
 
-        return op;
+        return super.onOptionsItemSelected(item);
     }
     public  boolean onCreateOptionsMenu(Menu menu){
         getMenuInflater().inflate(R.menu.menu_appbar, menu);
@@ -80,4 +101,6 @@ public class Main extends AppCompatActivity {
         }
         return super.onOptionsItemSelected(item);
     }
+
+
 }
