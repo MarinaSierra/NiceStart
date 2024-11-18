@@ -27,13 +27,15 @@
         android:layout_marginTop="24dp"
         app:layout_constraintEnd_toEndOf="@id/lineV2"
         app:layout_constraintStart_toStartOf="@id/lineV1"
-        app:layout_constraintTop_toBottomOf="@id/logo">
+        app:layout_constraintTop_toBottomOf="@id/logo"
+        app:startIconDrawable="@drawable/profile_icon">
 
         <EditText
             android:id="@+id/username"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/name"
+            android:paddingStart="40dp"
             android:background="@color/white"
             android:alpha="0.6"/>
     </com.google.android.material.textfield.TextInputLayout>
@@ -46,13 +48,15 @@
         app:passwordToggleEnabled="true"
         app:layout_constraintEnd_toEndOf="@id/lineV2"
         app:layout_constraintStart_toStartOf="@id/lineV1"
-        app:layout_constraintTop_toBottomOf="@id/cajatxt1">
+        app:layout_constraintTop_toBottomOf="@id/cajatxt1"
+        app:startIconDrawable="@drawable/lock_icon">
 
         <EditText
             android:id="@+id/password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/passwd"
+            android:paddingStart="40dp"
             android:background="@color/white"
             android:alpha="0.6"/>
     </com.google.android.material.textfield.TextInputLayout>
