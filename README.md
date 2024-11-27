@@ -1,5 +1,4 @@
 # PROYECTO DE COMIENZO: NICESTART
-(Añadí una Lottie en el activity LOGIN)Anahi Hinojosa
 We have six activities/interactions until now: **SPLASH**, **LOGIN**,  **SIGN UP**, **MAIN**, **PROFILE** and **EDIT PROFILE**. 
 
 ## SPLASH: 
@@ -17,8 +16,11 @@ which then will be automatically redirect to Login.
 Both activities are **related**: 
 
 ### In login activity: 
+
     android:onClick="openSignUp"
+
 ### Important code to know: 
+
     public void openSignUp(View view) {
         Intent intent1 = new Intent(Login.this, SignUp.class);
         startActivity(intent1);
@@ -27,8 +29,8 @@ Both activities are **related**:
 ## Main: 
 In this activity, I am testing some functions as the SnackBar:
 
-    `Snackbar snackbar1 = Snackbar.make(mLayout, "Action is done", Snackbar.LENGTH_SHORT);
-    snackbar1.show();`
+    Snackbar snackbar1 = Snackbar.make(mLayout, "Action is done", Snackbar.LENGTH_SHORT);
+    snackbar1.show();
 
 
 ![img.png](img.png) 
@@ -36,7 +38,7 @@ In this activity, I am testing some functions as the SnackBar:
 
 Toast function, which pops up with some information:
 
-    `Toast.makeText(this, "Item copied", Toast.LENGTH_SHORT).show();`
+    Toast.makeText(this, "Item copied", Toast.LENGTH_SHORT).show();
 
 
 ![img_1.png](img_1.png)
@@ -93,15 +95,15 @@ At the top of the page, there is a menu Appbar:
 It has some code of other functions:
 
 Clicking on the map icons, **Alert Dialog**: 
-
-public void showAlertDialogButtonClicked(Main main){
-MaterialAlertDialogBuilder builder = getMaterialAlertDialogBuilder();
-builder.setNegativeButton("South", new DialogInterface.OnClickListener() {
-@Override
-public void onClick(DialogInterface dialogInterface, int i) {
-Toast.makeText(Main.this, "Let's go!", Toast.LENGTH_SHORT).show();
-}
-});
+    
+    public void showAlertDialogButtonClicked(Main main){
+        MaterialAlertDialogBuilder builder = getMaterialAlertDialogBuilder();
+        builder.setNegativeButton("South", new DialogInterface.OnClickListener() {
+        @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                Toast.makeText(Main.this, "Let's go!", Toast.LENGTH_SHORT).show();
+            }
+        });
 
         builder.setNeutralButton("Other", new DialogInterface.OnClickListener() {
             @Override
@@ -153,3 +155,5 @@ It has some properties. For example, main activity has a profile image which fir
     .into(prof);
 
 That's it for now, **we'll be upgrading it!!**
+
+_código añadido por Anahí Hinojosa_
