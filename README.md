@@ -32,12 +32,15 @@ In this activity, I am testing some functions as the SnackBar:
 
 
 ![img.png](img.png) 
+
+
 Toast function, which pops up with some information:
 
     `Toast.makeText(this, "Item copied", Toast.LENGTH_SHORT).show();`
 
 
 ![img_1.png](img_1.png)
+
 
 It now has a WebView which refresh an image of a web: 
 
@@ -63,6 +66,7 @@ Another new function, is the Swipe Refresh Layout:
 It looks like this:
 
 ![main_activity](img/main.png)
+
 
 At the top of the page, there is a menu Appbar:
 
