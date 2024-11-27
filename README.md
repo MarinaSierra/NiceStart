@@ -44,23 +44,23 @@ Toast function, which pops up with some information:
 
 It now has a WebView which refresh an image of a web: 
 
-    `miVisorWeb = (WebView) findViewById(R.id.vistaweb);
+    miVisorWeb = (WebView) findViewById(R.id.vistaweb);
     WebSettings webSettings = miVisorWeb.getSettings();
     webSettings.setLoadWithOverviewMode(true);
     webSettings.setUseWideViewPort(true);
-    miVisorWeb.loadUrl("https://thispersondoesnotexist.com");`
+    miVisorWeb.loadUrl("https://thispersondoesnotexist.com");
 
 
 Another new function, is the Swipe Refresh Layout: 
 
-    `protected SwipeRefreshLayout.OnRefreshListener
+    protected SwipeRefreshLayout.OnRefreshListener
         mOnRefreshListener = new SwipeRefreshLayout.OnRefreshListener() {
             @Override
             public void onRefresh() {
                 miVisorWeb.reload();
                 swipeLayout.setRefreshing(false);
         }
-    };`
+    };
 
 
 It looks like this:
@@ -70,10 +70,10 @@ It looks like this:
 
 At the top of the page, there is a menu Appbar:
 
-    `public  boolean onCreateOptionsMenu(Menu menu){
+    public  boolean onCreateOptionsMenu(Menu menu){
     getMenuInflater().inflate(R.menu.menu_appbar, menu);
     return true;
-    }`
+    }
 
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
@@ -94,16 +94,16 @@ It has some code of other functions:
 
 Clicking on the map icons, **Alert Dialog**: 
 
-`public void showAlertDialogButtonClicked(Main main){
-    MaterialAlertDialogBuilder builder = getMaterialAlertDialogBuilder();
-    builder.setNegativeButton("South", new DialogInterface.OnClickListener() {
-    @Override
-        public void onClick(DialogInterface dialogInterface, int i) {
-T           oast.makeText(Main.this, "Let's go!", Toast.LENGTH_SHORT).show();
-        }
-    });`
+public void showAlertDialogButtonClicked(Main main){
+MaterialAlertDialogBuilder builder = getMaterialAlertDialogBuilder();
+builder.setNegativeButton("South", new DialogInterface.OnClickListener() {
+@Override
+public void onClick(DialogInterface dialogInterface, int i) {
+Toast.makeText(Main.this, "Let's go!", Toast.LENGTH_SHORT).show();
+}
+});
 
-    builder.setNeutralButton("Other", new DialogInterface.OnClickListener() {
+        builder.setNeutralButton("Other", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
                 Toast.makeText(Main.this, "Let's go!", Toast.LENGTH_SHORT).show();
