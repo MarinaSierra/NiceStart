@@ -133,6 +133,7 @@ Clicking on the map icons, **Alert Dialog**:
     }
 
 ![img_2.png](img_2.png)
+
 You can go to your profile by clicking the person icon: 
 ![profile_icon](img/person_icon.png)
 
