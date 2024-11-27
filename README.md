@@ -1,5 +1,5 @@
 # PROYECTO DE COMIENZO: NICESTART
-
+(Añadí una Lottie en el activity LOGIN)Anahi Hinojosa
 We have six activities/interactions until now: **SPLASH**, **LOGIN**,  **SIGN UP**, **MAIN**, **PROFILE** and **EDIT PROFILE**. 
 
 ## SPLASH: 

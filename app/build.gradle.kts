@@ -37,6 +37,7 @@ dependencies {
     implementation(libs.material)
     implementation(libs.activity)
     implementation(libs.constraintlayout)
+    implementation("com.airbnb.android:lottie:6.6.0")
     implementation("com.github.bumptech.glide:glide:4.16.0")
     implementation(libs.swiperefreshlayout)
     annotationProcessor("com.github.bumptech.glide:compiler:4.16.0")

@@ -88,6 +88,19 @@
         app:layout_constraintVertical_bias="0.047"
         app:strokeColor="@color/black"/>
 
+<!--Añadi el lottir en su ejercicio-->
+    <com.airbnb.lottie.LottieAnimationView
+
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="30dp"
+        app:layout_constraintEnd_toEndOf="@id/main"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="@id/main"
+        app:layout_constraintTop_toBottomOf="@id/button2"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/flornaranja" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/lineV1"
