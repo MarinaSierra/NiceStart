@@ -1,5 +1,6 @@
 package com.example.nicestart;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.ContextMenu;
@@ -11,6 +12,7 @@ import android.webkit.WebSettings;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
@@ -107,13 +109,38 @@ public class Main extends AppCompatActivity {
     }
 
     public void showAlertDialogButtonClicked(Main main){
+        MaterialAlertDialogBuilder builder = getMaterialAlertDialogBuilder();
+        builder.setNegativeButton("South", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                Toast.makeText(Main.this, "Let's go!", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        builder.setNeutralButton("Other", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                Toast.makeText(Main.this, "Let's go!", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        AlertDialog dialog = builder.create();
+        dialog.show();
+    }
+
+    private @NonNull MaterialAlertDialogBuilder getMaterialAlertDialogBuilder() {
         MaterialAlertDialogBuilder builder = new MaterialAlertDialogBuilder(this);
         builder.setTitle("Achtung!");
         builder.setMessage("Where do you go?");
         builder.setIcon(R.drawable.map_icon);
         builder.setCancelable(false);
 
-        AlertDialog dialog = builder.create();
-        dialog.show();
+        builder.setPositiveButton("North", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                Toast.makeText(Main.this, "Let's go!", Toast.LENGTH_SHORT).show();
+            }
+        });
+        return builder;
     }
 }

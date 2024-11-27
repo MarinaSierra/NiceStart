@@ -5,122 +5,99 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/gradient"
+    android:background="@color/white"
     tools:context=".Login">
 
-
-    <ImageView
-        android:id="@+id/girl"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:scaleType="fitStart"
-        android:src="@drawable/girl"
-        app:layout_constraintStart_toStartOf="@id/main"
-        app:layout_constraintTop_toTopOf="@id/main"
-        app:layout_constraintEnd_toEndOf="@id/main"/>
-
-
-    <ImageView
-        android:id="@+id/logo"
-        android:layout_width="110dp"
-        android:layout_height="110dp"
-        android:layout_marginTop="20dp"
-        android:src="@drawable/ic_action_name"
-        app:layout_constraintBottom_toBottomOf="@id/main"
-        app:layout_constraintEnd_toEndOf="@id/main"
-        app:layout_constraintHorizontal_bias="0.484"
-        app:layout_constraintStart_toStartOf="@id/lineV2"
-        app:layout_constraintTop_toTopOf="@id/lineH1"
-        app:layout_constraintVertical_bias="0.091" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/cajatxt1"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="44dp"
         app:layout_constraintEnd_toEndOf="@id/lineV2"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@id/lineV1"
-        app:layout_constraintTop_toBottomOf="@id/lineH2">
+        app:layout_constraintTop_toTopOf="@+id/main"
+        app:startIconDrawable="@drawable/profile_icon">
 
         <EditText
+            android:id="@+id/username"
             android:layout_width="match_parent"
-            android:layout_height="45dp"
+            android:layout_height="wrap_content"
             android:alpha="0.6"
             android:background="@color/white"
-            android:hint="@string/name" />
+            android:hint="@string/name"
+            android:paddingStart="40dp" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/cajatxt2"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="16dp"
         app:layout_constraintEnd_toEndOf="@id/lineV2"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@id/lineV1"
-        app:layout_constraintTop_toBottomOf="@id/cajatxt1">
+        app:layout_constraintTop_toBottomOf="@id/cajatxt1"
+        app:passwordToggleEnabled="true"
+        app:startIconDrawable="@drawable/lock_icon">
 
         <EditText
+            android:id="@+id/password"
             android:layout_width="match_parent"
-            android:layout_height="45dp"
+            android:layout_height="wrap_content"
             android:alpha="0.6"
             android:background="@color/white"
-            android:hint="@string/passwd" />
+            android:hint="@string/passwd"
+            android:paddingStart="40dp" />
     </com.google.android.material.textfield.TextInputLayout>
 
 
     <Button
         android:id="@+id/button1"
-        style="@style/landButton1"
-        android:text="@string/lg"
+        style="@style/buttonflat"
         android:onClick="openProfile"
-        app:layout_constraintBottom_toBottomOf="@id/button2"
+        android:text="@string/log"
+        app:layout_constraintBottom_toBottomOf="@+id/main"
         app:layout_constraintEnd_toEndOf="@id/lineV2"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@id/lineV1"
         app:layout_constraintTop_toBottomOf="@id/cajatxt2"
-        app:layout_constraintVertical_bias="0.224" />
+        app:layout_constraintVertical_bias="0.2" />
 
     <Button
         android:id="@+id/button2"
-        android:text="@string/sign_up"
-        style="@style/landButton2"
+        style="@style/buttonOutline"
         android:onClick="openSignUp"
-        app:cornerRadius="0dp"
+        android:text="@string/sign_up"
         app:layout_constraintBottom_toBottomOf="@id/main"
         app:layout_constraintEnd_toEndOf="@id/lineV2"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@id/lineV1"
         app:layout_constraintTop_toBottomOf="@id/button1"
-        app:layout_constraintVertical_bias="0.224"
-        app:strokeColor="@color/white"/>
+        app:layout_constraintVertical_bias="0.319"
+        app:strokeColor="@color/black" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/lineV1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.28" />
+        app:layout_constraintGuide_percent="0.19" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/lineV2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.72" />
+        app:layout_constraintGuide_percent="0.8" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/lineH1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.10" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/lineH2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.30" />
+        app:layout_constraintGuide_percent="0.20" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

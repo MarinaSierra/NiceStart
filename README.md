@@ -29,10 +29,15 @@ In this activity, I am testing some functions as the SnackBar:
 
     `Snackbar snackbar1 = Snackbar.make(mLayout, "Action is done", Snackbar.LENGTH_SHORT);
     snackbar1.show();`
+
+
+![img.png](img.png) 
 Toast function, which pops up with some information:
 
     `Toast.makeText(this, "Item copied", Toast.LENGTH_SHORT).show();`
 
+
+![img_1.png](img_1.png)
 
 It now has a WebView which refresh an image of a web: 
 
@@ -59,6 +64,69 @@ It looks like this:
 
 ![main_activity](img/main.png)
 
+At the top of the page, there is a menu Appbar:
+
+    `public  boolean onCreateOptionsMenu(Menu menu){
+    getMenuInflater().inflate(R.menu.menu_appbar, menu);
+    return true;
+    }`
+
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
+        final ConstraintLayout mLayout=findViewById(R.id.main);
+
+        if(id == R.id.item3){
+            //more code
+        } else if (id==R.id.item4) {
+            Intent intent=new Intent(this, Profile.class);
+            startActivity(intent);
+        } else if (id==R.id.item5) {
+            showAlertDialogButtonClicked(Main.this);
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
+It has some code of other functions:
+
+Clicking on the map icons, **Alert Dialog**: 
+
+`public void showAlertDialogButtonClicked(Main main){
+    MaterialAlertDialogBuilder builder = getMaterialAlertDialogBuilder();
+    builder.setNegativeButton("South", new DialogInterface.OnClickListener() {
+    @Override
+        public void onClick(DialogInterface dialogInterface, int i) {
+T           oast.makeText(Main.this, "Let's go!", Toast.LENGTH_SHORT).show();
+        }
+    });`
+
+    builder.setNeutralButton("Other", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                Toast.makeText(Main.this, "Let's go!", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        AlertDialog dialog = builder.create();
+        dialog.show();
+    }
+
+    private @NonNull MaterialAlertDialogBuilder getMaterialAlertDialogBuilder() {
+        MaterialAlertDialogBuilder builder = new MaterialAlertDialogBuilder(this);
+        builder.setTitle("Achtung!");
+        builder.setMessage("Where do you go?");
+        builder.setIcon(R.drawable.map_icon);
+        builder.setCancelable(false);
+
+        builder.setPositiveButton("North", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                Toast.makeText(Main.this, "Let's go!", Toast.LENGTH_SHORT).show();
+            }
+        });
+        return builder;
+    }
+
+![img_2.png](img_2.png)
 You can go to your profile by clicking the person icon: 
 ![profile_icon](img/person_icon.png)
 
