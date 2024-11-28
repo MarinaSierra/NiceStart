@@ -18,7 +18,7 @@ import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions;
 public class Profile extends AppCompatActivity {
     TextView texto;
     ImageView edit;
-    Button b;
+    Button continuar,logout;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -53,23 +53,34 @@ public class Profile extends AppCompatActivity {
                 startActivity(int2);
             }
         });
+
         texto=findViewById(R.id.name);
         Intent in = getIntent();
         String nombre = in.getStringExtra("n");
         texto.setText(nombre);
 
-        b=findViewById(R.id.continuar);
-        b.setOnClickListener(new View.OnClickListener() {
+        continuar=findViewById(R.id.continuar);
+        continuar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent1=new Intent(Profile.this, Main.class);
                 startActivity(intent1);
             }
         });
+
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
+        });
+
+        logout=findViewById(R.id.logout);
+        logout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent1=new Intent(Profile.this, Login.class);
+                startActivity(intent1);
+            }
         });
     }
 }
