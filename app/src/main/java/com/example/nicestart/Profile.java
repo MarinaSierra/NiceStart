@@ -78,7 +78,7 @@ public class Profile extends AppCompatActivity {
         logout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent1=new Intent(Profile.this, Login.class);
+                Intent intent1=new Intent(Profile.this, cargaSplash.class);
                 startActivity(intent1);
             }
         });
