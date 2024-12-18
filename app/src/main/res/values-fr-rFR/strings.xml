@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">NiceStart</string>
+    <string name="name">Nom</string>
+    <string name="go">Avant</string>
+    <string name="cancel">Annule</string>
+    <string name="password">Mot de passe</string>
+    <string name="register">registre</string>
+    <string name="Register">Registre</string>
+    <string name="logo">logo</string>
+    <string name="login">Se onnecter</string>
+    <string name="sign_up">Registre</string>
+    <string name="passwd">Mot de passe</string>
+    <string name="log">Se onnecter</string>
+    <string name="confirmar">Confirmer</string>
+    <string name="email">E-mail</string>
+    <string name="cancels">Annule</string>
+    <string name="confirm">Confirmer</string>
+    <string name="confirm_password">Confirmez le mot de passe</string>
+    <string name="lg">Se onnecter</string>
+    <string name="nicestart">NiceStart</string>
+    <string name="profile">Profil</string>
+    <string name="hola">Bonjour</string>
+</resources>
