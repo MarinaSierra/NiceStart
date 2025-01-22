@@ -10,6 +10,7 @@ import com.example.nicestart.Fragments.Page1;
 import com.example.nicestart.Fragments.Page2;
 import com.example.nicestart.Fragments.Page3;
 import com.example.nicestart.Fragments.Page4;
+import com.example.nicestart.MainBn;
 
 public class SectionsPagerAdapter extends FragmentPagerAdapter {
 
@@ -17,10 +18,11 @@ public class SectionsPagerAdapter extends FragmentPagerAdapter {
 //    private static final int[] TAB_TITLES = new int[]{R.string.tab_text_1, R.string.tab_text_2, R.string.tab_text_1, R.string.tab_text_2};
     private final Context mContext;
 
-    public SectionsPagerAdapter(Context context, FragmentManager fm) {
+    public SectionsPagerAdapter(MainBn context, androidx.fragment.app.FragmentManager fm) {
         super(fm);
         mContext = context;
     }
+
 
     @Override
     public Fragment getItem(int position) {
