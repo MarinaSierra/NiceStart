@@ -1,9 +1,8 @@
 # PROYECTO DE COMIENZO: NICESTART
-We have six activities/interactions until now: **SPLASH**, **LOGIN**,  **SIGN UP**, **MAIN**, **PROFILE** and **EDIT PROFILE**. 
+Tiene 6 activities: **SPLASH**, **LOGIN**,  **SIGN UP**, **MAIN**, **PROFILE** y **EDIT PROFILE**. 
 
 ## SPLASH: 
-Firstly, when opening the app, it shows the splash activity, 
-which then will be automatically redirect to Login.
+Al abrir la app, se carga el Splash, que pasado unos segundos, carga el login automaticamente.
 
 ![splash_activity](img/splash.png)
 
@@ -13,7 +12,7 @@ which then will be automatically redirect to Login.
 ## SIGN UP: 
 ![signup_activity](img/sign_up.png)
 
-Both activities are **related**: 
+Ambas activities estan **relacionadas**: 
 
 ### In login activity: 
 
@@ -27,7 +26,7 @@ Both activities are **related**:
     }
 
 ## Main: 
-In this activity, I am testing some functions as the SnackBar:
+En esta actividad se prueban varias funcionalidades:
 
     Snackbar snackbar1 = Snackbar.make(mLayout, "Action is done", Snackbar.LENGTH_SHORT);
     snackbar1.show();
@@ -36,7 +35,7 @@ In this activity, I am testing some functions as the SnackBar:
 ![img.png](img.png) 
 
 
-Toast function, which pops up with some information:
+La función toast, que muestra un pop up de texto:
 
     Toast.makeText(this, "Item copied", Toast.LENGTH_SHORT).show();
 
@@ -44,7 +43,7 @@ Toast function, which pops up with some information:
 ![img_1.png](img_1.png)
 
 
-It now has a WebView which refresh an image of a web: 
+Además, tiene un webview: 
 
     miVisorWeb = (WebView) findViewById(R.id.vistaweb);
     WebSettings webSettings = miVisorWeb.getSettings();
@@ -53,7 +52,7 @@ It now has a WebView which refresh an image of a web:
     miVisorWeb.loadUrl("https://thispersondoesnotexist.com");
 
 
-Another new function, is the Swipe Refresh Layout: 
+Cambia de imagen al recargar la página: 
 
     protected SwipeRefreshLayout.OnRefreshListener
         mOnRefreshListener = new SwipeRefreshLayout.OnRefreshListener() {
@@ -65,12 +64,12 @@ Another new function, is the Swipe Refresh Layout:
     };
 
 
-It looks like this:
+Se ve así:
 
 ![main_activity](img/main.png)
 
 
-At the top of the page, there is a menu Appbar:
+Arriba de la página, hay un menu Appbar:
 
     public  boolean onCreateOptionsMenu(Menu menu){
     getMenuInflater().inflate(R.menu.menu_appbar, menu);
@@ -92,9 +91,9 @@ At the top of the page, there is a menu Appbar:
         return super.onOptionsItemSelected(item);
     }
 
-It has some code of other functions:
+**Funciones:**
 
-Clicking on the map icons, **Alert Dialog**: 
+Al clicar en el icono del mapa, muestra un **Alert Dialog**: 
     
     public void showAlertDialogButtonClicked(Main main){
         MaterialAlertDialogBuilder builder = getMaterialAlertDialogBuilder();
@@ -134,27 +133,48 @@ Clicking on the map icons, **Alert Dialog**:
 
 ![img_2.png](img_2.png)
 
-You can go to your profile by clicking the person icon: 
+Si clicas en el icono del perfil, te redirige al perfil de usuario: 
 ![profile_icon](img/person_icon.png)
 
 ## Profile: 
 ![profile_activity](img/profile.png)
 
-This activity adds the name you've introduced by editing the profile. 
-It includes an edit button which sends you to this: 
+Esta actividad muestra el nombre que hayas introducido al editar el perfil. 
+Para ello, debes clicar en el icono de editar: 
 
 ## Edit profile: 
 ![edit_profile_activity](img/edit_profile.png)
 
 
-Each activity has a glide, which can access to an image from the internet, your local file, etc... 
-It has some properties. For example, main activity has a profile image which firstly wasn't rounded:
+Cada actividad tiene un **glide**, que permite el acceso a internet, archivos locales, etc... 
+Tiene algunas propiedades. Por ejemplo, la main activity tiene una imagen que no era redonda de primeras:
 
     .load("https://uxwing.com/wp-content/themes/uxwing/download/peoples-avatars/default-profile-picture-female-icon.png")
     .transition(DrawableTransitionOptions.withCrossFade(1000))
     .circleCrop()
     .into(prof);
 
-That's it for now, **we'll be upgrading it!!**
+## Menu bottom navigation y AppBar:
 
-_código añadido por Anahí Hinojosa_
+Accedemos a estas activities a traves del main: 
+
+    `else if(id==R.id.item6){
+        Intent intent=new Intent(this, MainBn.class);
+        startActivity(intent);
+    } else if(id==R.id.item7){
+        Intent intent=new Intent(this, MainBab.class);
+        startActivity(intent);
+    }`
+
+El mainBn es una activity que tiene un view pager y un bottom navigation. 
+Con los botones de este menu, nos movemos por unos fragments que se muestran en el view pager:
+
+![activity_menubn](img/menuBottonNavigation.png)
+
+
+El mainBab es un activity con un menu bottom AppBar. Así se ve:
+
+![activity_main_bab](img/menuAppbar.png)
+
+
+Por ahora se ve así, **¡iremos actualizando!**

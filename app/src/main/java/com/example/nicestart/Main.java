@@ -104,6 +104,12 @@ public class Main extends AppCompatActivity {
             startActivity(intent);
         } else if (id==R.id.item5) {
             showAlertDialogButtonClicked(Main.this);
+        } else if(id==R.id.item6){
+            Intent intent=new Intent(this, MainBn.class);
+            startActivity(intent);
+        } else if(id==R.id.item7){
+            Intent intent=new Intent(this, MainBab.class);
+            startActivity(intent);
         }
         return super.onOptionsItemSelected(item);
     }

@@ -13,10 +13,10 @@
         </DropdownSelection>
         <DialogSelection />
       </SelectionState>
-      <SelectionState runConfigName="MainBab">
+      <SelectionState runConfigName="MainBn">
         <option name="selectionMode" value="DROPDOWN" />
       </SelectionState>
-      <SelectionState runConfigName="MainBn">
+      <SelectionState runConfigName="Main">
         <option name="selectionMode" value="DROPDOWN" />
       </SelectionState>
     </selectionStates>

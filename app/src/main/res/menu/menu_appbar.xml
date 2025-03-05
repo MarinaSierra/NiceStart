@@ -16,4 +16,14 @@
         android:title="map"
         android:icon="@drawable/map_icon"
         app:showAsAction="ifRoom"/>
+    <item
+        android:id="@+id/item6"
+        android:title="MainBn"
+        android:icon="@drawable/ic_woman"
+        app:showAsAction="ifRoom"/>
+    <item
+        android:id="@+id/item7"
+        android:title="MainBab"
+        android:icon="@drawable/ic_man"
+        app:showAsAction="ifRoom"/>
 </menu>

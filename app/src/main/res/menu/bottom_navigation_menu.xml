@@ -17,7 +17,7 @@
     </item>
 
     <item
-        android:id="@+id/añadir"
+        android:id="@+id/anadir"
         android:title="añadir"
         android:icon="@drawable/icono_mas"
         android:contentDescription="none"
