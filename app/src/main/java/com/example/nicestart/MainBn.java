@@ -36,40 +36,36 @@ public class MainBn extends AppCompatActivity {
         // cast al xml
         BottomNavigationView mybottomNavView = findViewById(R.id.bottom_navigation);
 
-        // crear badges
-        BottomNavigationMenuView bottomNavigationMenuView =
-                (BottomNavigationMenuView) mybottomNavView.getChildAt(0);
+        /*// crear badges
+        BottomNavigationView bottomNavigationMenuView =
+                (BottomNavigationView) mybottomNavView.getChildAt(0);
         View v = bottomNavigationMenuView.getChildAt(2);
-        BottomNavigationItemView itemView = (BottomNavigationItemView) v;
+        BottomNavigationView itemView = (BottomNavigationView) v;
 
         LayoutInflater.from(this)
-                .inflate(R.layout.layout_badge, itemView, true);
+                .inflate(R.layout.layout_badge, itemView, true);*/
 
 
         //here we listen to navigation across menu items and set the pager and the icon state checked
-        mybottomNavView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+        mybottomNavView.setOnItemSelectedListener(new BottomNavigationView.OnItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
 
                 if(item.getItemId()==R.id.inicio){
                     item.setChecked(true);
                     Toast.makeText(MainBn.this, "Inicio", Toast.LENGTH_SHORT).show();
-                    removeBadge(mybottomNavView, item.getItemId());
                     viewPager1.setCurrentItem(0);
                 } else if (item.getItemId()==R.id.biblioteca) {
                     item.setChecked(true);
                     Toast.makeText(MainBn.this, "Biblioteca", Toast.LENGTH_SHORT).show();
-                    removeBadge(mybottomNavView, item.getItemId());
                     viewPager1.setCurrentItem(1);
                 } else if (item.getItemId()==R.id.anadir) {
                     item.setChecked(true);
                     Toast.makeText(MainBn.this, "Añadir", Toast.LENGTH_SHORT).show();
-                    removeBadge(mybottomNavView, item.getItemId());
                     viewPager1.setCurrentItem(2);
                 } else if (item.getItemId()==R.id.menu) {
                     item.setChecked(true);
                     Toast.makeText(MainBn.this, "Menu", Toast.LENGTH_SHORT).show();
-                    removeBadge(mybottomNavView, item.getItemId());
                     viewPager1.setCurrentItem(3);
                 }
                 return false;
@@ -79,28 +75,6 @@ public class MainBn extends AppCompatActivity {
 
 //        here we listen to viewpager moves and set navigations items checked or not
 
-        viewPager1.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
-            @Override
-            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
-
-            }
-
-            @Override
-            public void onPageSelected(int position) {
-                if (prevMenuItem != null) {
-                    prevMenuItem.setChecked(false);
-                } else {
-//                    mybottomNavView.getMenu().getItem(position).setChecked(false);
-                    mybottomNavView.getMenu().getItem(position).setChecked(true);
-                    removeBadge(mybottomNavView, mybottomNavView.getMenu().getItem(position).getItemId());
-                }
-            }
-
-            @Override
-            public void onPageScrollStateChanged(int state) {
-
-            }
-        });
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (view, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
@@ -108,20 +82,6 @@ public class MainBn extends AppCompatActivity {
             return insets;
         });
 
-    }
-
-    /**
-     * Remove badge.
-     *
-     * @param bottomNavigationView the bottom navigation view
-     * @param itemId               the item id
-     */
-//removing badges
-    public static void removeBadge(BottomNavigationView bottomNavigationView, @IdRes int itemId) {
-        BottomNavigationItemView itemView = bottomNavigationView.findViewById(itemId);
-        if (itemView.getChildCount() == 3) {
-            itemView.removeViewAt(2);
-        }
     }
 
 }
