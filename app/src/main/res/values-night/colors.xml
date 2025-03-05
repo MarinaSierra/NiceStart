@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="black">#1D1D1D</color>
-    <color name="white">#717171</color>
+    <color name="LightSteelBlue">#677383</color>
+    <color name="LightSkyBlue">#5A87A3</color>
+    <color name="DarkSlateBlue">#988ED6</color>
+    <color name="purple_500">#A66AFB</color>
+    <color name="RoyalBlue">#91A1D0</color>
+    <color name="CornflowerBlue">#6495ED</color>
+    <color name="DarkBlue">#B5B7E6</color>
+    <color name="black">#FFFFFF</color>
+    <color name="white">#303030</color>
 </resources>

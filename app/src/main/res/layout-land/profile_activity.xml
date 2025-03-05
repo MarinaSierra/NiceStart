@@ -10,8 +10,8 @@
 
     <ImageView
         android:id="@+id/profileBanner"
-        android:layout_width="0dp"
-        android:layout_height="115dp"
+        android:layout_width="734dp"
+        android:layout_height="98dp"
         app:layout_constraintEnd_toEndOf="@id/main"
         app:layout_constraintHorizontal_bias="0.263"
         app:layout_constraintStart_toStartOf="@id/main"
@@ -21,9 +21,9 @@
         android:id="@+id/profileImg"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:layout_marginTop="172dp"
+        android:layout_marginTop="112dp"
         app:layout_constraintEnd_toEndOf="@id/main"
-        app:layout_constraintHorizontal_bias="0.263"
+        app:layout_constraintHorizontal_bias="0.15"
         app:layout_constraintStart_toStartOf="@id/main"
         app:layout_constraintTop_toTopOf="@id/main" />
 
@@ -31,25 +31,25 @@
         android:id="@+id/name"
         android:layout_width="102dp"
         android:layout_height="39dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="32dp"
         android:fontFamily="@font/abril_fatface"
         android:hint="@string/name"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="@id/lineV2"
-        app:layout_constraintHorizontal_bias="0.688"
+        app:layout_constraintHorizontal_bias="0.704"
         app:layout_constraintStart_toStartOf="@id/profileImg"
-        app:layout_constraintTop_toBottomOf="@id/guideline" />
+        app:layout_constraintTop_toBottomOf="@id/profileBanner" />
 
     <TextView
         android:id="@+id/userdesc"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="44dp"
+        android:layout_marginTop="40dp"
         android:fontFamily="@font/abril_fatface"
         android:hint="Information about me..."
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="@id/lineV2"
-        app:layout_constraintHorizontal_bias="0.823"
+        app:layout_constraintHorizontal_bias="0.728"
         app:layout_constraintStart_toEndOf="@id/profileImg"
         app:layout_constraintTop_toBottomOf="@id/name" />
 
@@ -57,10 +57,10 @@
         android:id="@+id/estrellas"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="8dp"
         android:src="@drawable/stars"
         app:layout_constraintEnd_toEndOf="@id/lineV2"
-        app:layout_constraintHorizontal_bias="0.338"
+        app:layout_constraintHorizontal_bias="0.179"
         app:layout_constraintStart_toStartOf="@id/main"
         app:layout_constraintTop_toBottomOf="@id/profileImg" />
 
@@ -68,10 +68,10 @@
         android:id="@+id/editar"
         android:layout_width="22dp"
         android:layout_height="26dp"
-        android:layout_marginTop="172dp"
+        android:layout_marginTop="140dp"
         android:src="@drawable/edit_icon"
         app:layout_constraintEnd_toEndOf="@id/main"
-        app:layout_constraintHorizontal_bias="0.389"
+        app:layout_constraintHorizontal_bias="0.401"
         app:layout_constraintStart_toEndOf="@id/name"
         app:layout_constraintTop_toTopOf="@id/main" />
 
@@ -80,11 +80,11 @@
         style="@style/buttonflat"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="164dp"
-        android:text="Continuar"
+        android:layout_marginTop="92dp"
         android:backgroundTint="@color/LightSteelBlue"
+        android:text="Continuar"
         app:layout_constraintEnd_toEndOf="@id/main"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.332"
         app:layout_constraintStart_toStartOf="@id/main"
         app:layout_constraintTop_toBottomOf="@id/estrellas" />
 
@@ -93,12 +93,13 @@
         style="@style/buttonflat"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:text="Log Out"
+        android:layout_marginTop="108dp"
         android:backgroundTint="@color/LightSteelBlue"
+        android:text="Log Out"
         app:layout_constraintEnd_toEndOf="@id/main"
+        app:layout_constraintHorizontal_bias="0.647"
         app:layout_constraintStart_toStartOf="@id/main"
-        app:layout_constraintTop_toBottomOf="@id/continuar" />
+        app:layout_constraintTop_toBottomOf="@id/userdesc" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/lineV1"

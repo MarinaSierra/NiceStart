@@ -58,6 +58,7 @@
         style="@style/buttonflat"
         android:onClick="openProfile"
         android:text="@string/log"
+        android:backgroundTint="@color/LightSteelBlue"
         app:layout_constraintBottom_toBottomOf="@+id/main"
         app:layout_constraintEnd_toEndOf="@id/lineV2"
         app:layout_constraintHorizontal_bias="0.0"
